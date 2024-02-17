@@ -1,8 +1,13 @@
 add_rules("mode.release", "mode.debug")
 
+set_languages("c++17")
+add_includedirs("src/buffer")
+add_includedirs("src/log")
+
 target("WebServer")
     set_kind("binary")
-    set_languages("c++17")
     add_files("src/**.cc")
-    add_includedirs("src/buffer")
-    add_includedirs("src/log")
+
+target("test_log")
+    set_kind("binary")
+    add_files("test/test_log.cc", "src/log/**.cc", "src/buffer/**.cc")
