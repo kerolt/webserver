@@ -39,6 +39,7 @@ public:
 
     // 可写空间的起始处
     char* BeginWrite();
+    const char* BeginWriteConst() const;
 
     // 向缓冲区中添加数据
     void Append(const char*, size_t);

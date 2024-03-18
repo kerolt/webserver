@@ -34,6 +34,10 @@ char* Buffer::BeginWrite() {
     return Begin() + write_pos_;
 }
 
+const char* Buffer::BeginWriteConst() const {
+    return Begin() + write_pos_;
+}
+
 void Buffer::Append(const char* str, size_t len) {
     EnsureWritable(len);
     std::copy(str, str + len, BeginWrite());
