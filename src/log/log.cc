@@ -164,19 +164,19 @@ void Log::AsyncWrite() {
 void Log::AppendLogLevelTitle(int level) {
     switch (level) {
         case 0:
-            buffer_.Append("[Debug] ", 8);
+            buffer_.Append("DEBUG : ", 8);
             break;
         case 1:
-            buffer_.Append("[Info]  ", 8);
+            buffer_.Append(" INFO : ", 8);
             break;
         case 2:
-            buffer_.Append("[Warn]  ", 8);
+            buffer_.Append(" WARN : ", 8);
             break;
         case 3:
-            buffer_.Append("[Error] ", 8);
+            buffer_.Append("ERROR : ", 8);
             break;
         default:
-            buffer_.Append("[Info]  ", 8);
+            buffer_.Append(" INFO : ", 8);
             break;
     }
 }
