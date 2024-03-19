@@ -25,7 +25,7 @@ public:
         const char* suffix = ".log",
         int max_queue_size = 1024,
         int level = INFO);
-    void Write(int level, const char* format, ...);
+    void Write(int level, const char* filename, const char* funcname, int line, const char* format, ...);
     void Flush();
     void SetLevel(int level);
     int GetLevel();
@@ -66,13 +66,13 @@ private:
 
 // 日志等级分为0,1,2,3
 // 能够记录的日志等级必须在初始化时给出的等级及以上
-#define LOG_BASE(level, format, ...)                     \
-    do {                                                 \
-        Log* log = Log::Instance();                      \
-        if (log->IsOpen() && log->GetLevel() <= level) { \
-            log->Write(level, format, ##__VA_ARGS__);    \
-            log->Flush();                                \
-        }                                                \
+#define LOG_BASE(level, format, ...)                                                                            \
+    do {                                                                                                        \
+        Log* log = Log::Instance();                                                                             \
+        if (log->IsOpen() && log->GetLevel() <= level) {                                                        \
+            log->Write(level, (char*) (__FILE__), (char*) (__func__), (int) (__LINE__), format, ##__VA_ARGS__); \
+            log->Flush();                                                                                       \
+        }                                                                                                       \
     } while (0);
 
 #define LOG_DEBUG(format, ...) LOG_BASE(DEBUG, format, ##__VA_ARGS__);

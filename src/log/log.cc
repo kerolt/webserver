@@ -87,7 +87,9 @@ void Log::Init(const char* path, const char* suffix, int max_queue_size, int lev
 }
 
 // 向缓冲区中写入数据，真正将数据写入文件将由写线程来完成
-void Log::Write(int level, const char* format, ...) {
+// 参考SpringBoot的日志格式
+// 2024-03-19 10:25:20.290  INFO 11831 --- [  restartedMain] com.kerolt.plat.BackendApplication       : Started
+void Log::Write(int level, const char* filename, const char* funcname, int line, const char* format, ...) {
     timeval now = {0, 0};
     gettimeofday(&now, nullptr);
     time_t sec = now.tv_sec;
@@ -119,16 +121,24 @@ void Log::Write(int level, const char* format, ...) {
     {
         std::lock_guard<std::mutex> lock(mutex_);
         lines_++;
+
+        // 添加时间格式
         int n = snprintf(buffer_.BeginWrite(), 128, "%d-%02d-%02d %02d:%02d:%02d.%06ld ",
                          sys_time->tm_year + 1900, sys_time->tm_mon + 1, sys_time->tm_mday,
                          sys_time->tm_hour, sys_time->tm_min, sys_time->tm_sec, now.tv_usec);
         buffer_.HasWritten(n);
+
+        // 添加日志级别
         AppendLogLevelTitle(level);
 
+        // 添加文件名、函数名、行号
+        n = snprintf(buffer_.BeginWrite(), 128, "[%s\t] [%s\t %03d] : ", filename, funcname, line);
+        buffer_.HasWritten(n);
+
+        // 添加具体自定义日志信息
         va_start(args, format);
         int m = vsnprintf(buffer_.BeginWrite(), buffer_.WritableBytes(), format, args);
         va_end(args);
-
         buffer_.HasWritten(m);
         buffer_.Append("\n\0", 2); // fputs读取数据直到遇见'\0'
 
@@ -164,19 +174,19 @@ void Log::AsyncWrite() {
 void Log::AppendLogLevelTitle(int level) {
     switch (level) {
         case 0:
-            buffer_.Append("DEBUG : ", 8);
+            buffer_.Append("DEBUG --- ", 10);
             break;
         case 1:
-            buffer_.Append(" INFO : ", 8);
+            buffer_.Append(" INFO --- ", 10);
             break;
         case 2:
-            buffer_.Append(" WARN : ", 8);
+            buffer_.Append(" WARN --- ", 10);
             break;
         case 3:
-            buffer_.Append("ERROR : ", 8);
+            buffer_.Append("ERROR --- ", 10);
             break;
         default:
-            buffer_.Append(" INFO : ", 8);
+            buffer_.Append(" INFO --- ", 10);
             break;
     }
 }
