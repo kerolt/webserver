@@ -14,7 +14,7 @@ int main() {
 
     Log::Instance()->Init("./", ".log", 1024, DEBUG);
 
-    SqlConnPool* conn_pool = SqlConnPool::Instantce();
+    SqlConnPool* conn_pool = SqlConnPool::Instance();
     if (conn_pool) {
         try {
             conn_pool->Init(host, port, user, pwd, db_name, conn_size);

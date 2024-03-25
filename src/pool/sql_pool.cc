@@ -8,7 +8,7 @@
 #include <mysql/mysql.h>
 #include "log.h"
 
-SqlConnPool* SqlConnPool::Instantce() {
+SqlConnPool* SqlConnPool::Instance() {
     static SqlConnPool conn_pool;
     return &conn_pool;
 }

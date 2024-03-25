@@ -12,7 +12,7 @@
 
 class SqlConnPool {
 public:
-    static SqlConnPool* Instantce();
+    static SqlConnPool* Instance();
 
     void Init(const char* host,
               int port,
