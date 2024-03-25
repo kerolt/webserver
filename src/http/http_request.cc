@@ -2,10 +2,17 @@
 
 #include <cassert>
 #include <algorithm>
+#include <mysql/mysql.h>
 #include <string>
 #include <regex>
+#include <unordered_set>
 
 #include "log.h"
+#include "sql_pool.h"
+
+const std::unordered_set<std::string> HttpRequest::kDefaultHtml = {"/index", "/login", "/register", "/welcome"};
+
+const std::unordered_map<std::string, int> HttpRequest::kDefaultHtmlTag = {{"/register.html", 0}, {"/login.html", 1}};
 
 // 解析HTTP请求
 bool HttpRequest::Parse(Buffer& buffer) {
@@ -88,7 +95,9 @@ int HttpRequest::ConvertHex(char ch) {
     return ch;
 }
 
-bool HttpRequest::UserVerify(const std::string& name, const std::string& pwd, bool is_login) {}
+// TODO 可能将该功能移出Http Request做一个单独的模块
+bool HttpRequest::UserVerify(const std::string& name, const std::string& pwd, bool is_login) {
+}
 
 // 解析HTTP请求的第一行
 // METHOD PATH HTTP/VERSION
@@ -127,8 +136,80 @@ void HttpRequest::ParseBody(const std::string& line) {
     LOG_DEBUG("\"Body\": %s; \"Len\": %d", line.c_str(), line.size());
 }
 
-void HttpRequest::ParsePath() {}
+// 路由与html的映射
+void HttpRequest::ParsePath() {
+    if (path_ == "/") {
+        path_ = "/index.html";
+    } else {
+        for (auto& path : kDefaultHtml) {
+            if (path == path_) {
+                path_ += ".html";
+                break;
+            }
+        }
+    }
+}
 
-void HttpRequest::ParsePost() {}
+// 处理表单提交和用户验证
+void HttpRequest::ParsePost() {
+    if (method_ != "POST" || header_["Content-Type"] != "application/x-www-form-urlencoded") {
+        return;
+    }
+    ParseFromUrl();
+    if (kDefaultHtmlTag.count(path_)) {
+        int tag = kDefaultHtmlTag.find(path_)->second;
+        LOG_DEBUG("Tag: %d", tag);
+        if (tag == 0 || tag == 1) {
+            bool is_login = (tag == 1);
+            if (UserVerify(post_["username"], post_["password"], is_login)) {
+                path_ = "/welcome.html";
+            } else {
+                path_ = "/error.html";
+            }
+        }
+    }
+}
 
-void HttpRequest::ParseFromUrl() {}
+// 解析在URL中的参数
+// 键值对使用 & 隔开，+ 代表空格
+void HttpRequest::ParseFromUrl() {
+    if (body_.size() == 0) {
+        return;
+    }
+
+    std::string key, value;
+    int num{};
+    int body_size = body_.size();
+    int left{}, right{};
+
+    while (right < body_size) {
+        char ch = body_[right];
+        switch (ch) {
+            case '=': // 键 结束的位置
+                key = body_.substr(left, right - left);
+                left = right + 1;
+                break;
+            case '+':
+                body_[right] = ' ';
+                break;
+            case '%':
+                num = ConvertHex(body_[right + 1]) * 16 + ConvertHex(body_[right + 2]);
+                body_[right + 2] = num % 10 + '0';
+                body_[right + 1] = num / 10 + '0';
+                break;
+            case '&': // 值 结束的位置
+                value = body_.substr(left, right - left);
+                post_[key] = value;
+                LOG_DEBUG("key-value: %s = %s", key.c_str(), value.c_str());
+                break;
+            default:
+                break;
+        }
+        right++;
+    }
+    assert(left <= right);
+    if (post_.count(key) == 0 && left < right) {
+        value = body_.substr(left, right - left);
+        post_[key] = value;
+    }
+}
