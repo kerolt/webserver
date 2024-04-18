@@ -1,5 +1,8 @@
-#include <iostream>
+#include "config.h"
+#include "server.h"
 
 int main() {
-    std::cout << "Hello, from WebServer!\n";
+    Config config("./config.json");
+    WebServer server(config);
+    server.Run();
 }
