@@ -1,0 +1,15 @@
+{
+    "port": 8899,
+    "trigMode": 3,
+    "timeoutMs": 60000,
+    "linger": false,
+    "sqlPort": 3306,
+    "sqlUser": "kerolt",
+    "sqlPwd": "kerolt",
+    "dbName": "tiny_server",
+    "connPoolNum": 12,
+    "threadNum": 6,
+    "openLog": true,
+    "logLevel": 0,
+    "logQueSize": 1024
+}
