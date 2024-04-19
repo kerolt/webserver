@@ -2,6 +2,7 @@
 
 #include <cassert>
 #include <algorithm>
+#include <iostream>
 #include <mysql/mysql.h>
 #include <string>
 #include <regex>
@@ -14,6 +15,13 @@ const std::unordered_set<std::string> HttpRequest::kDefaultHtml = {"/index", "/l
 
 const std::unordered_map<std::string, int> HttpRequest::kDefaultHtmlTag = {{"/register.html", 0}, {"/login.html", 1}};
 
+void HttpRequest::Init() {
+    method_ = path_ = version_ = body_ = "";
+    state_ = ParseState::REQUEST_LINE;
+    header_.clear();
+    post_.clear();
+}
+
 // 解析HTTP请求
 bool HttpRequest::Parse(Buffer& buffer) {
     const char crlf[] = "\r\n";
@@ -21,7 +29,7 @@ bool HttpRequest::Parse(Buffer& buffer) {
         return false;
     }
     while (buffer.ReadableBytes() && state_ != ParseState::FINISH) {
-        const char* line_end = std::search(buffer.Peek(), buffer.BeginWriteConst(), crlf, crlf + 1);
+        const char* line_end = std::search(buffer.Peek(), buffer.BeginWriteConst(), crlf, crlf + 2);
         std::string line(buffer.Peek(), line_end);
         switch (state_) {
             case ParseState::REQUEST_LINE:
@@ -45,6 +53,7 @@ bool HttpRequest::Parse(Buffer& buffer) {
         if (line_end == buffer.BeginWrite()) {
             break;
         }
+        buffer.RetrieveUntil(line_end + 2);
     }
     LOG_DEBUG("[%s], [%s], [%s]", method_.c_str(), path_.c_str(), version_.c_str());
     return true;
@@ -105,9 +114,9 @@ bool HttpRequest::ParseRequestLine(const std::string& line) {
     std::regex patten("^([^ ]*) ([^ ]*) HTTP/([^ ]*)$");
     std::smatch sub_smatch;
     if (std::regex_match(line, sub_smatch, patten)) {
-        method_ = sub_smatch[0];
-        path_ = sub_smatch[1];
-        version_ = sub_smatch[2];
+        method_ = sub_smatch[1];
+        path_ = sub_smatch[2];
+        version_ = sub_smatch[3];
         state_ = ParseState::HEADERS;
         return true;
     }
@@ -138,15 +147,15 @@ void HttpRequest::ParseBody(const std::string& line) {
 
 // 路由与html的映射
 void HttpRequest::ParsePath() {
-    if (path_ == "/") {
+    if (path_ == "/" || path_ == "") {
         path_ = "/index.html";
     } else {
-        for (auto& path : kDefaultHtml) {
-            if (path == path_) {
-                path_ += ".html";
-                break;
-            }
-        }
+        // for (auto& path : kDefaultHtml) {
+        //     if (path == path_) {
+        //         path_ += ".html";
+        //         break;
+        //     }
+        // }
     }
 }
 

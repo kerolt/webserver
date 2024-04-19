@@ -28,13 +28,11 @@ public:
 
 public:
     HttpRequest() {
-        method_ = path_ = version_ = body_ = "";
-        state_ = ParseState::REQUEST_LINE;
-        header_.clear();
-        post_.clear();
+        Init();
     }
     ~HttpRequest() = default;
 
+    void Init();
     bool Parse(Buffer& buffer);
     bool IsKeepAlive() const;
 

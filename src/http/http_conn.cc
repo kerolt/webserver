@@ -19,8 +19,6 @@ HttpConn::HttpConn() {
     fd_ = -1;
     addr_ = {0};
     is_close_ = true;
-    read_buf_.RetrieveAll();
-    write_buf_.RetrieveAll();
 }
 
 HttpConn::~HttpConn() {
@@ -33,6 +31,8 @@ void HttpConn::Init(int sock_fd, const struct sockaddr_in& addr) {
     addr_ = addr;
     fd_ = sock_fd;
     is_close_ = false;
+    read_buf_.RetrieveAll();
+    write_buf_.RetrieveAll();
     LOG_INFO("++ Client[%d](%s:%d) come in, user count is %d", fd_, GetIP(), GetPort(), (int) UserCnt);
 }
 
@@ -88,6 +88,7 @@ ssize_t HttpConn::Write(int* err) {
 
 bool HttpConn::Process() {
     // 解析请求并初始化响应
+    request_.Init(); // 如果不进行Init，则会有之前Http request的数据残余
     if (read_buf_.ReadableBytes() <= 0) {
         return false;
     } else if (request_.Parse(read_buf_)) {
