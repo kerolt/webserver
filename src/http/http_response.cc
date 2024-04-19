@@ -27,8 +27,8 @@ const std::unordered_map<std::string, std::string> HttpResponse::kSuffixType = {
     {".avi", "video/x-msvideo"},
     {".gz", "application/x-gzip"},
     {".tar", "application/x-tar"},
-    {".css", "text/css "},
-    {".js", "text/javascript "},
+    {".css", "text/css"},
+    {".js", "text/javascript"},
 };
 
 const std::unordered_map<int, std::string> HttpResponse::kCodeStatus = {
@@ -39,9 +39,9 @@ const std::unordered_map<int, std::string> HttpResponse::kCodeStatus = {
 };
 
 const std::unordered_map<int, std::string> HttpResponse::kCodePath = {
-    {400, "/400.html"},
-    {403, "/403.html"},
-    {404, "/404.html"},
+    {400, "400.html"},
+    {403, "403.html"},
+    {404, "404.html"},
 };
 
 HttpResponse::HttpResponse() {
@@ -57,7 +57,7 @@ HttpResponse::~HttpResponse() {
 }
 
 void HttpResponse::Init(const std::string& src, std::string& path, bool is_alive, int code) {
-    assert(src_dir_ != "");
+    assert(src != "");
     if (file_) {
         UnmapFile();
     }
