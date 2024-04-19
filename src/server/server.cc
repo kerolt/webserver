@@ -34,7 +34,7 @@ WebServer::WebServer(Config config)
     // 成员初始化
     src_dir_ = getcwd(nullptr, 256);
     assert(src_dir_);
-    strncat(src_dir_, "/web/", 16);
+    strncat(src_dir_, "/web", 16);
     HttpConn::UserCnt = 0;
     HttpConn::SrcDir = src_dir_;
     SqlConnPool::Instance()->Init("localhost", config_.port, config_.sql_user.c_str(), config_.sql_pwd.c_str(), config_.db_name.c_str());
@@ -174,7 +174,7 @@ bool WebServer::InitSocket() {
 void WebServer::InitEventMode(int trig_mode) {
     listen_evt_ = EPOLLRDHUP;
     conn_evt_ = EPOLLONESHOT | EPOLLRDHUP;
-    switch (config_.trig_mode) {
+    switch (trig_mode) {
         case 0:
             break;
         case 1:
