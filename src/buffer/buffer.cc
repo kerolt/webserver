@@ -117,6 +117,11 @@ void Buffer::RetrieveAll() {
     write_pos_ = 0;
 }
 
+void Buffer::RetrieveUntil(const char* end) {
+    assert(Peek() <= end);
+    Retrieve(end - Peek());
+}
+
 std::string Buffer::RetrieveAllToStr() {
     std::string data(Peek(), ReadableBytes());
     RetrieveAll();

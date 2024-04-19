@@ -58,6 +58,7 @@ public:
     // 复位buffer或取出其中的数据
     void Retrieve(size_t len);
     void RetrieveAll();
+    void RetrieveUntil(const char* end);
     std::string RetrieveAllToStr();
 
 private:
