@@ -1,0 +1,6 @@
+web/
+build/
+./webserver
+*.o
+*.out
+*.a

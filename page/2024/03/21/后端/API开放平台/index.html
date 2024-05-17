@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"kerolt.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="前言通过一个项目来学习一下如何设计一个多服务的系统。同时也能学习Spring Cloud Gateway、Dubbo、API签名等一些知识。 项目架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="API开放平台">
+<meta property="og:url" content="http://kerolt.github.io/2024/03/21/%E5%90%8E%E7%AB%AF/API%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/index.html">
+<meta property="og:site_name" content="Kerolt&#39;s Blog">
+<meta property="og:description" content="前言通过一个项目来学习一下如何设计一个多服务的系统。同时也能学习Spring Cloud Gateway、Dubbo、API签名等一些知识。 项目架构">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://kerolt.github.io/images/Screenshot_20240321_190000.png">
+<meta property="article:published_time" content="2024-03-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-20T16:00:00.000Z">
+<meta property="article:author" content="Kerolt">
+<meta property="article:tag" content="SpringBoot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://kerolt.github.io/images/Screenshot_20240321_190000.png">
+
+
+<link rel="canonical" href="http://kerolt.github.io/2024/03/21/%E5%90%8E%E7%AB%AF/API%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://kerolt.github.io/2024/03/21/%E5%90%8E%E7%AB%AF/API%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/","path":"2024/03/21/后端/API开放平台/","title":"API开放平台"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>API开放平台 | Kerolt's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Kerolt's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">项目架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%89%8D%E5%8F%B0"><span class="nav-number">3.</span> <span class="nav-text">用户前台</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7"><span class="nav-number">3.1.</span> <span class="nav-text">普通用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E5%91%98"><span class="nav-number">3.2.</span> <span class="nav-text">管理员</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AFSDK%EF%BC%88api-client-sdk%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">客户端SDK（api-client-sdk）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E5%85%B3%EF%BC%88api-gateway%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">网关（api-gateway）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1%EF%BC%88api-interface%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">接口服务（api-interface）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E6%8E%A5%E5%8F%A3%EF%BC%88api-common%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">抽象接口（api-common）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%90%8E%E5%8F%B0%EF%BC%88api-backend%EF%BC%89"><span class="nav-number">8.</span> <span class="nav-text">服务后台（api-backend）</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kerolt"
+      src="https://picx.zhimg.com/v2-f14895864d68f2db5f8e650481075209_xll.jpg">
+  <p class="site-author-name" itemprop="name">Kerolt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kerolt.github.io/2024/03/21/%E5%90%8E%E7%AB%AF/API%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://picx.zhimg.com/v2-f14895864d68f2db5f8e650481075209_xll.jpg">
+      <meta itemprop="name" content="Kerolt">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kerolt's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="API开放平台 | Kerolt's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          API开放平台
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-03-21 00:00:00" itemprop="dateCreated datePublished" datetime="2024-03-21T00:00:00+08:00">2024-03-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>通过一个项目来学习一下如何设计一个多服务的系统。同时也能学习Spring Cloud Gateway、Dubbo、API签名等一些知识。</p>
+<h2 id="项目架构"><a href="#项目架构" class="headerlink" title="项目架构"></a>项目架构</h2><p><img src="/../../images/Screenshot_20240321_190000.png"></p>
+<span id="more"></span>
+
+<h2 id="用户前台"><a href="#用户前台" class="headerlink" title="用户前台"></a>用户前台</h2><h3 id="普通用户"><a href="#普通用户" class="headerlink" title="普通用户"></a>普通用户</h3><p>例如管理员发布了一个新的接口A，如果一位开发者并没有注册为该平台的用户，那么即便这位开发者拿到了这个接口地址，也是不可以使用接口A的。</p>
+<p>当他注册为平台用户后，后台会给他生成<strong>AccessKey</strong>和<strong>SecretKey</strong>（后文简称为ak和sk）用于API签名认证，这时，用户带着这两个key，就可通过前台提供的在线测试或者客户端SDK来调用想要的接口了。</p>
+<h3 id="管理员"><a href="#管理员" class="headerlink" title="管理员"></a>管理员</h3><p>管理员职责就是管理接口，包括接口的上线、下线、添加等</p>
+<h2 id="客户端SDK（api-client-sdk）"><a href="#客户端SDK（api-client-sdk）" class="headerlink" title="客户端SDK（api-client-sdk）"></a>客户端SDK（api-client-sdk）</h2><p>若管理员将接口下线，则请求无效</p>
+<p>通过<strong>AccessKey</strong>和<strong>SecretKey</strong>来请求<code>api-interface</code>接口服务。其中ak和sk只有用户在平台注册账号后才会分。当然，添加网关后，应该在<code>api-interface</code>前使用添加一层网关服务来避免api接口的直接暴露</p>
+<p>sdk中的请求方法应该和api-interface中提供的接口一一对应，也就是两边应该同步修改</p>
+<h2 id="网关（api-gateway）"><a href="#网关（api-gateway）" class="headerlink" title="网关（api-gateway）"></a>网关（api-gateway）</h2><p>使用Spring Cloud Gateway来完成一下功能</p>
+<ol>
+<li><strong>统一鉴权认证</strong>：应用 API 签名认证算法校验用户请求的合法性。根据请求拿到用户信息后从数据库中获取ak、sk进行比较，如果相同则代表用户请求合法</li>
+<li><strong>公共业务逻辑</strong>：对每个接口的调用进行集中的统计 。这类似于Spring MVC中的拦截器和Spring中的AOP</li>
+<li><strong>路由转发</strong>：前端发送请求到 API 网关，通过网关转发到实际的 API 接口 。这样就避免了直接将完整的接口地址暴露出来</li>
+<li><strong>流量染色</strong>：给经过网关的请求加上特定的请求头参数，便于让实际的 API 服务确定请求来源及合法性</li>
+</ol>
+<h2 id="接口服务（api-interface）"><a href="#接口服务（api-interface）" class="headerlink" title="接口服务（api-interface）"></a>接口服务（api-interface）</h2><p>真正实现和提供接口的地方，可以只编写controller层</p>
+<h2 id="抽象接口（api-common）"><a href="#抽象接口（api-common）" class="headerlink" title="抽象接口（api-common）"></a>抽象接口（api-common）</h2><p>在网关层由于要进行API鉴权，这避免不料要查询数据库，但是网关服务项目并没有使用MyBatis-Plus，为了避免写重复的代码，利用Dubbo分布式改造，使得网关层可以通过RPC来调用后端服务的方法</p>
+<h2 id="服务后台（api-backend）"><a href="#服务后台（api-backend）" class="headerlink" title="服务后台（api-backend）"></a>服务后台（api-backend）</h2><p>最核心的业务层服务！</p>
+<ul>
+<li>用户注册时会自动生成其ak和sk</li>
+<li>接口信息的管理，即普通的增删改查，发布、下线接口</li>
+<li>接口调用统计（没错，网关是通过rpc调用这里的服务）</li>
+<li>当前台用户要进行在线测试时，我们会使用到用户的ak和sk，只有这样才能够比较安全的调用接口；而再通过客户端SDK，就能比较方便地去请求接口</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/SpringBoot/" rel="tag"># SpringBoot</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/07/OS/%E3%80%8CMIT6.S081%E3%80%8DLab1%20Utilities/" rel="prev" title="「MIT6.S081」Lab1 Utilities">
+                  <i class="fa fa-angle-left"></i> 「MIT6.S081」Lab1 Utilities
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/04/11/%E7%AE%97%E6%B3%95/%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98%E4%B8%8E%E7%8A%B6%E6%80%81%E6%9C%BAdp/" rel="next" title="股票问题与状态机dp">
+                  股票问题与状态机dp <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Kerolt</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"kerolt.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="前言· 首先，我们要清楚这个实验的目的是什么：  In this assignment you will add a system call tracing feature that may help you when debugging later labs. You’ll create a new trace system call that will control tracing. It">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【MIT6.S081】Lab2 trace">
+<meta property="og:url" content="http://kerolt.github.io/posts/18ad9abb/index.html">
+<meta property="og:site_name" content="Kerolt&#39;s Blog">
+<meta property="og:description" content="前言· 首先，我们要清楚这个实验的目的是什么：  In this assignment you will add a system call tracing feature that may help you when debugging later labs. You’ll create a new trace system call that will control tracing. It">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://kerolt.github.io/images/Pasted%20image%2020240510183553.png">
+<meta property="article:published_time" content="2024-05-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-05-09T16:00:00.000Z">
+<meta property="article:author" content="Kerolt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://kerolt.github.io/images/Pasted%20image%2020240510183553.png">
+
+
+<link rel="canonical" href="http://kerolt.github.io/posts/18ad9abb/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://kerolt.github.io/posts/18ad9abb/","path":"posts/18ad9abb/","title":"【MIT6.S081】Lab2 trace"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【MIT6.S081】Lab2 trace | Kerolt's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Kerolt's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mask%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">mask是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E5%8F%8A%E5%85%B6%E5%AD%90%E8%BF%9B%E7%A8%8B%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96mask%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">进程及其子进程如何获取mask？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%B7%9F%E8%B8%AA%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">如何跟踪系统调用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%90%8E"><span class="nav-number">5.</span> <span class="nav-text">最后</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kerolt"
+      src="https://picx.zhimg.com/v2-f14895864d68f2db5f8e650481075209_xll.jpg">
+  <p class="site-author-name" itemprop="name">Kerolt</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kerolt.github.io/posts/18ad9abb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://picx.zhimg.com/v2-f14895864d68f2db5f8e650481075209_xll.jpg">
+      <meta itemprop="name" content="Kerolt">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kerolt's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【MIT6.S081】Lab2 trace | Kerolt's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【MIT6.S081】Lab2 trace
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-10 00:00:00" itemprop="dateCreated datePublished" datetime="2024-05-10T00:00:00+08:00">2024-05-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="前言">前言<a class="anchor" href="#前言">·</a></h2>
+<p>首先，我们要清楚这个实验的目的是什么：</p>
+<blockquote>
+<p>In this assignment you will add a system call tracing feature that may help you when debugging later labs. You’ll create a new trace system call that will control tracing. It should take one argument, an integer “mask”, whose bits specify which system calls to trace. For example, to trace the fork system call, a program calls trace(1 &lt;&lt; SYS_fork), where SYS_fork is a syscall number from kernel/syscall.h. You have to modify the xv6 kernel to print out a line when each system call is about to return, if the system call’s number is set in the mask. The line should contain the process id, the name of the system call and the return value; you don’t need to print the system call arguments. The trace system call should enable tracing for the process that calls it and any children that it subsequently forks, but should not affect other processes.</p>
+</blockquote>
+<p>译：在Xv6的trace命令中，它应该有一个参数，一个整数“掩码”，其位指定要跟踪的系统调用。例如，要跟踪fork系统调用，程序调用<code>trace(1&lt;&lt;SYS_fork)</code>，其中SYS_fork是<code>kernel/syscall.h</code>中的系统调用编号。如果系统调用的编号在掩码中设置，则必须修改xv6内核，以便在每个系统调用即将返回时打印出一行。该行应包含<strong>进程id</strong>、<strong>系统调用的名称</strong>和<strong>返回值</strong>；您不需要打印系统调用参数。跟踪系统调用应启用对调用它的进程及其随后分叉的任何<strong>子进程</strong>的跟踪，但不应影响其他进程。</p>
+<p>注意，在该实验的初始阶段，xv6已经为我们提供了trace命令的用户态实现，但是其底层的系统调用需要我们自己实现。</p>
+<span id="more"></span>
+<h2 id="mask是什么？">mask是什么？<a class="anchor" href="#mask是什么？">·</a></h2>
+<p>在使用trace命令时用到的掩码，是用来跟踪之后使用的命令用到了哪些系统调用。例如实验中给出的例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ trace 32 grep hello README</span><br><span class="line">3: syscall <span class="built_in">read</span> -&gt; 1023</span><br><span class="line">3: syscall <span class="built_in">read</span> -&gt; 966</span><br><span class="line">3: syscall <span class="built_in">read</span> -&gt; 70</span><br><span class="line">3: syscall <span class="built_in">read</span> -&gt; 0</span><br></pre></td></tr></table></figure>
+<p>这个32就是掩码，其跟踪到了grep命令中使用到了read系统调用（为什么是read？马上就说到了）。在xv6的<code>kernel/syscall.h</code>中有所有系统调用的编号：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// System call numbers</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_fork    1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_exit    2</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_wait    3</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_pipe    4</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_read    5</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_kill    6</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_exec    7</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_fstat   8</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_chdir   9</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_dup    10</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_getpid 11</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_sbrk   12</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_sleep  13</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_uptime 14</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_open   15</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_write  16</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_mknod  17</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_unlink 18</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_link   19</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_mkdir  20</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_close  21</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SYS_trace  22 </span></span><br></pre></td></tr></table></figure>
+<p>看这个<code>SYS_read</code>，其值为5，那么1 &lt;&lt; 5是不是等于32呢，是不是就是之前给出的掩码呢？没错！所以这个掩码（mask）的意思就是查找一个命令所用到的系统调用，且这些系统调用的编号（假设为syscall_num）在经过位运算（1 &lt;&lt; syscall_num）后小于等于掩码，即 <code>(1 &lt;&lt; syscall_num) &lt;= mask</code> ，这也可以写成 <code>(mask &gt;&gt; syscall_num) &amp; 1</code> 是否为1。</p>
+<p>xv6内核提供给用户态的接口为trace，但是我们需要自己<strong>在xv6的用户头文件中添加函数的声明</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// user/user.h</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">trace</span><span class="params">(<span class="type">int</span>)</span>; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<p>这个trace底层其实调用的应该是sys_trace（这个函数名不是固定的，但是源码中其他的系统调用的命名都为sys_*，故trace对应的系统调用写成sys_trace更加合理）。sys_trace需要做的是将用户传入的mask再传给当前进程及其子进程。</p>
+<p>我们这里<strong>将系统调用sys_trace的编号设置为22</strong>。</p>
+<h2 id="进程及其子进程如何获取mask？">进程及其子进程如何获取mask？<a class="anchor" href="#进程及其子进程如何获取mask？">·</a></h2>
+<p>在xv6 book的4.3节中，有这么一段话：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">syscall (kernel/syscall.c:132) retrieves the system call number from the saved a7 in the trapframe and uses it to index into syscalls. For the first system call, a7 contains SYS_exec (kernel/syscall.h:8),  resulting in a call to the system call implementation function sys_exec.</span><br><span class="line"></span><br><span class="line">When sys_exec returns, syscall records its return value in p-&gt;trapframe-&gt;a0. This will cause the original user-space call to exec() to return that value, since the C calling convention on RISC-V places return values in a0. System calls conventionally return negative numbers to indicate errors, and zero or positive numbers for success. If the system call number is invalid, syscall prints an error and returns −1.</span><br></pre></td></tr></table></figure>
+<p>即系统调用的编号会保存在进程的trapframe中，根据a7寄存器即可获得，系统调用的返回值可通过a0寄存器获得。欸！这两个值可不就是实验实现中需要的吗！那么理所当然，实验中需要打印的语句应该就在这个函数中添加。</p>
+<p>让我们来看看xv6中进程的数据结构：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kernel/proc.h</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">proc</span> &#123;</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">spinlock</span> <span class="title">lock</span>;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// p-&gt;lock must be held when using these:</span></span><br><span class="line">  <span class="class"><span class="keyword">enum</span> <span class="title">procstate</span> <span class="title">state</span>;</span>        <span class="comment">// Process state</span></span><br><span class="line">  <span class="type">void</span> *chan;                  <span class="comment">// If non-zero, sleeping on chan</span></span><br><span class="line">  <span class="type">int</span> killed;                  <span class="comment">// If non-zero, have been killed</span></span><br><span class="line">  <span class="type">int</span> xstate;                  <span class="comment">// Exit status to be returned to parent&#x27;s wait</span></span><br><span class="line">  <span class="type">int</span> pid;                     <span class="comment">// Process ID</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// wait_lock must be held when using this:</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">proc</span> *<span class="title">parent</span>;</span>         <span class="comment">// Parent process</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// these are private to the process, so p-&gt;lock need not be held.</span></span><br><span class="line">  uint64 kstack;               <span class="comment">// Virtual address of kernel stack</span></span><br><span class="line">  uint64 sz;                   <span class="comment">// Size of process memory (bytes)</span></span><br><span class="line">  <span class="type">pagetable_t</span> pagetable;       <span class="comment">// User page table</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">trapframe</span> *<span class="title">trapframe</span>;</span> <span class="comment">// data page for trampoline.S</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">context</span> <span class="title">context</span>;</span>      <span class="comment">// swtch() here to run process</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">file</span> *<span class="title">ofile</span>[<span class="title">NOFILE</span>];</span>  <span class="comment">// Open files</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">inode</span> *<span class="title">cwd</span>;</span>           <span class="comment">// Current directory</span></span><br><span class="line">  <span class="type">char</span> name[<span class="number">16</span>];               <span class="comment">// Process name (debugging)</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 添加</span></span><br><span class="line">  <span class="type">int</span> trace_mask;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到诸如进程名、pid、上下文等信息都是保存在这个数据结构中，那么我们可以<strong>在其中加上一个成员变量 <code>trace_mask</code> 用于保存当前进程所对应trace命令中的掩码mask</strong>。</p>
+<p>xv6已经实现了用户态的trace命令，其位于 <code>user/trace.c</code> 中：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;kernel/param.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;kernel/types.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;kernel/stat.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;user/user.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span></span><br><span class="line"><span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i;</span><br><span class="line">  <span class="type">char</span> *nargv[MAXARG];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(argc &lt; <span class="number">3</span> || (argv[<span class="number">1</span>][<span class="number">0</span>] &lt; <span class="string">&#x27;0&#x27;</span> || argv[<span class="number">1</span>][<span class="number">0</span>] &gt; <span class="string">&#x27;9&#x27;</span>))&#123;</span><br><span class="line">    <span class="built_in">fprintf</span>(<span class="number">2</span>, <span class="string">&quot;Usage: %s mask command\n&quot;</span>, argv[<span class="number">0</span>]);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (trace(atoi(argv[<span class="number">1</span>])) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">fprintf</span>(<span class="number">2</span>, <span class="string">&quot;%s: trace failed\n&quot;</span>, argv[<span class="number">0</span>]);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; argc &amp;&amp; i &lt; MAXARG; i++)&#123;</span><br><span class="line">    nargv[i<span class="number">-2</span>] = argv[i];</span><br><span class="line">  &#125;</span><br><span class="line">  exec(nargv[<span class="number">0</span>], nargv);</span><br><span class="line">  <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>对于这样的一条命令 <code>trace 32 grep hello README</code> ，假设开启的进程名为p，那么32将会传给<code>p.trace_mask</code>，之后的grep操作将使用<code>exec</code><strong>创建子进程</strong>（假设进程名为son）执行，那么在创建子进程后应该有<code>son.trace_mask = p.trace_mask</code>，只有这样，grep操作所用到的系统调用才能被跟踪到。</p>
+<p>在使用trace命令时，其后的mask参数会存到a0寄存器中，为了从其中拿到mask，可以使用<code>argint()</code>函数，其源码为：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kernel/syscall.h</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Fetch the nth 32-bit system call argument.</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">argint</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> *ip)</span> &#123;</span><br><span class="line">  *ip = argraw(n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">static</span> uint64 <span class="title function_">argraw</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">proc</span> *<span class="title">p</span> =</span> myproc();</span><br><span class="line">  <span class="keyword">switch</span> (n) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">    <span class="keyword">return</span> p-&gt;trapframe-&gt;a0;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">return</span> p-&gt;trapframe-&gt;a1;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">    <span class="keyword">return</span> p-&gt;trapframe-&gt;a2;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">    <span class="keyword">return</span> p-&gt;trapframe-&gt;a3;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">    <span class="keyword">return</span> p-&gt;trapframe-&gt;a4;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">    <span class="keyword">return</span> p-&gt;trapframe-&gt;a5;</span><br><span class="line">  &#125;</span><br><span class="line">  panic(<span class="string">&quot;argraw&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>argint()</code>内调用了<code>argraw()</code>，在查看以上源码后，我们可以知道要获取a0寄存器中的值，应该将0传入argraw中。<strong>在<code>kernel/sysproc.c</code>中实现<code>sys_trace()</code></strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kernel/sysproc.c</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">uint64 <span class="title function_">sys_trace</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">  <span class="type">int</span> mask;</span><br><span class="line">  argint(<span class="number">0</span>, &amp;mask);</span><br><span class="line">  <span class="keyword">if</span> (mask &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">proc</span> *<span class="title">p</span> =</span> myproc();</span><br><span class="line">  p-&gt;trace_mask = mask;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样当trace使用了底层的sys_trace时，就可以把mask参数传递给当前进程。但是只传递给当前进程还不够，还要传给当前进程的子进程。在Linux，我们创建子进程的函数为<code>fork()</code>，在xv6中也同样如此，fork内部先获取当前进程的proc结构体，然后新创建一个proc结构体代表子进程，并将父进程中的值拷贝过去，故<strong>传递给子进程的mask也在其中拷贝</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kernel/proc.c</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">fork</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// copy mask from father process to son process</span></span><br><span class="line">  <span class="comment">// np为子进程，p为父进程</span></span><br><span class="line">  np-&gt;trace_mask = p-&gt;trace_mask;</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>要注意一个小细节，<strong>当进程结构体被释放时（进程结束或者为进程分配proc结构体），其mask也该重置</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kernel/proc.c</span></span><br><span class="line"></span><br><span class="line"><span class="type">static</span> <span class="type">void</span> <span class="title function_">freeproc</span><span class="params">(<span class="keyword">struct</span> proc *p)</span> &#123;</span><br><span class="line">  <span class="comment">// ... ...</span></span><br><span class="line">  p-&gt;trace_mask = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>完成好以上内容后，就可以<strong>实现sys_trace</strong>了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kernel/sysproc.c</span></span><br><span class="line"></span><br><span class="line">uint64 <span class="title function_">sys_trace</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">  <span class="type">int</span> mask;</span><br><span class="line">  argint(<span class="number">0</span>, &amp;mask);</span><br><span class="line">  <span class="keyword">if</span> (mask &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">proc</span> *<span class="title">p</span> =</span> myproc();</span><br><span class="line">  p-&gt;trace_mask = mask;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样，当前进程就可以获取了到mask，当其创建子进程时，子进程也可获取到mask~</p>
+<h2 id="如何跟踪系统调用？">如何跟踪系统调用？<a class="anchor" href="#如何跟踪系统调用？">·</a></h2>
+<p>刚刚我们说了mask的作用，还有进程及其子进程如何获取mask，那么我们又应该如何跟踪系统调用呢？</p>
+<p>xv6中所用的系统调用都是在 <code>kernel/syscall.c</code> 中的 <code>syscall</code> 函数中调用的，为了能在syscall.c中调用sys_trace，需要在其中<strong>添加extern声明</strong>（其定义在刚刚已经实现，位于kernel/sysproc.c）：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> uint64 <span class="title function_">sys_trace</span><span class="params">(<span class="type">void</span>)</span>;</span><br></pre></td></tr></table></figure>
+<p>同时需要<strong>在syscalls数组中添加sys_trace的编号</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="title function_">uint64</span> <span class="params">(*syscalls[])</span><span class="params">(<span class="type">void</span>)</span> = &#123;</span><br><span class="line"><span class="comment">// ... ...</span></span><br><span class="line">[SYS_trace]   sys_trace,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里实际上就是 [22] = sys_trace</span></span><br><span class="line"><span class="comment">// 使用了gcc的一个拓展</span></span><br></pre></td></tr></table></figure>
+<p>并按照顺序<strong>添加各个系统调用的名字</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *syscall_names[] = &#123;</span><br><span class="line">  <span class="string">&quot;fork&quot;</span>, <span class="string">&quot;exit&quot;</span>, <span class="string">&quot;wait&quot;</span>, <span class="string">&quot;pipe&quot;</span>, <span class="string">&quot;read&quot;</span>, <span class="string">&quot;kill&quot;</span>,</span><br><span class="line">  <span class="string">&quot;exec&quot;</span>, <span class="string">&quot;fstat&quot;</span>, <span class="string">&quot;chdir&quot;</span>, <span class="string">&quot;dup&quot;</span>, <span class="string">&quot;getpid&quot;</span>, <span class="string">&quot;sbrk&quot;</span>,</span><br><span class="line">  <span class="string">&quot;sleep&quot;</span>, <span class="string">&quot;uptime&quot;</span>, <span class="string">&quot;open&quot;</span>, <span class="string">&quot;write&quot;</span>, <span class="string">&quot;mknod&quot;</span>, <span class="string">&quot;unlink&quot;</span>,</span><br><span class="line">  <span class="string">&quot;link&quot;</span>, <span class="string">&quot;mkdir&quot;</span>, <span class="string">&quot;close&quot;</span>, <span class="string">&quot;trace&quot;</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>在 <code>kernel/syscall.c</code> 中，xv6根据a7寄存器获取系统调用的编号，然后通过syscalls函数数组执行系统调用，那么我们的实现为：当使用的系统调用合法时，获取当前进程的mask，并通过判断<code>(mask &gt;&gt; syscall_num) &amp; 1</code>是否为1来输出跟踪信息。</p>
+<p>例如sys_read系统调用的编号为5，mask为32，则<code>(32 &gt;&gt; 5) &amp; 1 = 1</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">syscall</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">  <span class="type">int</span> num;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">proc</span> *<span class="title">p</span> =</span> myproc();</span><br><span class="line"></span><br><span class="line">  num = p-&gt;trapframe-&gt;a7;</span><br><span class="line">  <span class="keyword">if</span>(num &gt; <span class="number">0</span> &amp;&amp; num &lt; NELEM(syscalls) &amp;&amp; syscalls[num]) &#123;</span><br><span class="line">    <span class="comment">// Use num to lookup the system call function for num, call it,</span></span><br><span class="line">    <span class="comment">// and store its return value in p-&gt;trapframe-&gt;a0</span></span><br><span class="line">    p-&gt;trapframe-&gt;a0 = syscalls[num]();</span><br><span class="line"></span><br><span class="line">	<span class="comment">// ===============================</span></span><br><span class="line">    <span class="type">int</span> mask = p-&gt;trace_mask;</span><br><span class="line">    <span class="keyword">if</span> ((mask &gt;&gt; num) &amp; <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;%d: syscall %s -&gt; %d\n&quot;</span>, p-&gt;pid, syscall_names[num - <span class="number">1</span>], p-&gt;trapframe-&gt;a0);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ===============================</span></span><br><span class="line"></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s: unknown sys call %d\n&quot;</span>,</span><br><span class="line">            p-&gt;pid, p-&gt;name, num);</span><br><span class="line">    p-&gt;trapframe-&gt;a0 = <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那么，内核是如何通过trace找到sys_trace的呢？根据实验指导上的提示，可以知道 <code>user/usys.pl</code> 起到了一个中间人的作用：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># user/usys.pl</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">sub entry &#123;</span><br><span class="line">    my $name = shift;</span><br><span class="line">    print &quot;.global $name\n&quot;;</span><br><span class="line">    print &quot;$&#123;name&#125;:\n&quot;;</span><br><span class="line">    print &quot; li a7, SYS_$&#123;name&#125;\n&quot;;</span><br><span class="line">    print &quot; ecall\n&quot;;</span><br><span class="line">    print &quot; ret\n&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">entry(&quot;uptime&quot;);</span><br><span class="line"><span class="addition">++entry(&quot;trace&quot;); # 这是实验中需要由我们自己添加的</span></span><br></pre></td></tr></table></figure>
+<p>通过其中的entry函数，可以生成对应的调用（xv6中为ecall）系统调用的汇编语句，即大致的流程为xv6在构建内核时，会将用户态trace命令对应到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.global trace</span><br><span class="line">trace:</span><br><span class="line">    li a7, SYS_trace</span><br><span class="line">    ecall</span><br><span class="line">    ret</span><br></pre></td></tr></table></figure>
+<p>这样，当前进程就可以通过a7寄存器拿到sys_trace的系统调用编号了，也就是说，<code>syscall</code> 函数可以调用 <code>sys_trace</code> 了。</p>
+<p>OK，那么一个大致的框架就出来了：</p>
+<p><img src="../../images/Pasted%20image%2020240510183553.png" alt=""></p>
+<h2 id="最后">最后<a class="anchor" href="#最后">·</a></h2>
+<p>完成上面的步骤后，最后只要在<code>Makefile</code>中的<code>UPROGS</code>加上<code>$U/_trace</code>即可。</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">UPROGS=\</span><br><span class="line">	$U/_cat\</span><br><span class="line">	$U/_echo\</span><br><span class="line">	$U/_forktest\</span><br><span class="line">	$U/_grep\</span><br><span class="line">	$U/_init\</span><br><span class="line">	$U/_kill\</span><br><span class="line">	$U/_ln\</span><br><span class="line">	$U/_ls\</span><br><span class="line">	$U/_mkdir\</span><br><span class="line">	$U/_rm\</span><br><span class="line">	$U/_sh\</span><br><span class="line">	$U/_stressfs\</span><br><span class="line">	$U/_usertests\</span><br><span class="line">	$U/_grind\</span><br><span class="line">	$U/_wc\</span><br><span class="line">	$U/_zombie\</span><br><span class="line"><span class="addition">++	$U/_trace</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/bb522614/" rel="prev" title="股票问题第二波">
+                  <i class="fa fa-angle-left"></i> 股票问题第二波
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Kerolt</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

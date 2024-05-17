@@ -1,0 +1,3006 @@
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Benchmarking: GET http://localhost:8099/
+1000 clients, running 20 sec.
+
+Speed=1607829 pages/min, -12796773 bytes/sec.
+Requests: 535943 susceed, 0 failed.
