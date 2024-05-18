@@ -1,0 +1,57 @@
+Language: Cpp
+AccessModifierOffset: -4
+# 禁用当前format文件
+DisableFormat: false
+# 缩进宽度
+IndentWidth: 4
+# tab宽度
+TabWidth: 4
+
+# 行尾注释对齐
+AlignTrailingComments: true
+
+# 不允许较短 case 在同一行
+AllowShortCaseLabelsOnASingleLine: false
+
+# 1行的条件判断语句
+AllowShortIfStatementsOnASingleLine: false
+
+# 枚举
+AllowShortEnumsOnASingleLine: false
+
+# 允许短的函数放在同一行: None, InlineOnly(定义在类中), Empty(空函数), Inline(定义在类中，空函数), All
+AllowShortFunctionsOnASingleLine: Empty
+
+# 不允许短的块放在同一行
+AllowShortBlocksOnASingleLine: true
+
+# 在构造函数初始化时按逗号断行，并以冒号对齐
+BreakConstructorInitializersBeforeComma: true
+
+# switch的case缩进
+IndentCaseLabels: true
+
+# 去除block开始的空格
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# 最大连续空行数为1
+MaxEmptyLinesToKeep: 1
+
+# 指针向右对齐: 即靠近指针变量名
+PointerAlignment: Left
+
+# 括号后加空格
+SpaceAfterCStyleCast: true
+
+# 赋值运算符前加空格
+SpaceBeforeAssignmentOperators: true
+
+# 行尾的注释前加1个空格
+SpacesBeforeTrailingComments: 1
+
+# 每行字符的限制，0表示没有限制
+ColumnLimit: 0
+
+AlwaysBreakTemplateDeclarations: Yes
+
+SortIncludes: false

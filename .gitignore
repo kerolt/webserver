@@ -1,0 +1,8 @@
+web/
+build/
+./webserver
+ssl/
+test_result_files/
+*.o
+*.out
+*.a
