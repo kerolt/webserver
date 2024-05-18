@@ -59,7 +59,7 @@ void Server::HandleConn() {
     socklen_t clilen = sizeof(cliaddr);
     int conn_fd;
     while ((conn_fd = Accept(listen_fd_, (SA*) &cliaddr, &clilen)) >= 0) {
-        LOG_INFO << "Accept fd = " << conn_fd;
+        LOG_DEBUG << "Accept fd = " << conn_fd;
         SetNonBlock(conn_fd);
         std::shared_ptr<EventLoop> next_loop = thread_pool_->GetNextLoop();
         std::shared_ptr<Channel> conn_channel(NewElement<Channel>(next_loop), DeleteElement<Channel>);

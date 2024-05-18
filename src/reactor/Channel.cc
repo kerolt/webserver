@@ -38,7 +38,7 @@ void Channel::SetNotFirst() {
 }
 
 Channel::~Channel() {
-    LOG_INFO << "Delete fd = " << fd_;
+    LOG_DEBUG << "Delete fd = " << fd_;
     Close(fd_);
 }
 void Channel::SetFd(int fd) {

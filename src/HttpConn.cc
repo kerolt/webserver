@@ -1,4 +1,5 @@
 #include "HttpConn.h"
+#include "log/Logging.h"
 
 static unsigned char FromHex(unsigned char x) {
     unsigned char y;
@@ -92,7 +93,7 @@ ParseState HttpConn::ParseMethod() {
         // 一定要记得这一步，因为如果当前path_代表一个目录，则要将sbuf更新至path_/index.html，只有这样，在获取st_size时才是文件的大小
         stat((storage_ + path_).c_str(), &sbuf);
     }
-    LOG_INFO << "Method: " << (method_ == METHOD_GET ? "GET" : "OTHER") << ", File Name: " << path_;
+    LOG_DEBUG << "Method: " << (method_ == METHOD_GET ? "GET" : "OTHER") << ", File Name: " << path_;
     // LOG_DEBUG << "Test";
     size_ = sbuf.st_size;
     if (!Read(msg, "\r\n")) {
