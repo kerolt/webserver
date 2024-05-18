@@ -105,8 +105,8 @@ void Conf::init(char* path) {
     }
     file.close();
 
-    if (m.find("IO_thread") != m.end())
-        io_thread = stoi(m["IO_thread"]);
+    if (m.find("io_thread") != m.end())
+        io_thread = stoi(m["io_thread"]);
     else
         io_thread = DEFAULT_IO_THREAD;
 
@@ -125,8 +125,8 @@ void Conf::init(char* path) {
     else
         storage = DEFAULT_STORAGE;
 
-    if (m.find("keep-alived") != m.end())
-        keep_alived = stoi(m["keep-alived"]);
+    if (m.find("keep_alived") != m.end())
+        keep_alived = stoi(m["keep_alived"]);
     else
         keep_alived = DEFAULT_KEEP_ALIVED;
 
