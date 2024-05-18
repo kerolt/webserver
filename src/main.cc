@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
         }
     }
 
-    GetConf().init(conf);
+    GetConf().Init(conf);
     GetCache().Init();
     signal(SIGPIPE, SIG_IGN);
     signal(SIGINT, EventLoop::SetQuit);

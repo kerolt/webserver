@@ -1,5 +1,8 @@
-#include <cstring>
 #include "Conf.h"
+
+#include <cstring>
+
+#include <type_traits>
 
 #define DEFAULT_IO_THREAD 3
 #define DEFAULT_PORT "8080"
@@ -14,43 +17,43 @@
 #define DEFAULT_SSLKEYPATH "ssl/ca.key"
 
 int Conf::GetIoThreads() {
-    return io_thread;
+    return io_thread_;
 }
 
 std::string Conf::GetPort() {
-    return port;
+    return port_;
 }
 
 int Conf::GetListenq() {
-    return listenq;
+    return listenq_;
 }
 
 int Conf::GetKeepAlived() {
-    return keep_alived;
+    return keep_alived_;
 }
 
 std::string Conf::GetStorage() {
-    return storage;
+    return storage_;
 }
 
 std::string Conf::GetLogFile() {
-    return logfile;
+    return logfile_;
 }
 
 int Conf::GetCapacity() {
-    return capacity;
+    return capacity_;
 }
 
 bool Conf::GetSSL() {
-    return ssl;
+    return ssl_;
 }
 
 std::string Conf::GetSSLCrtPath() {
-    return sslcrtpath;
+    return sslcrtpath_;
 }
 
 std::string Conf::GetSSLKeyPath() {
-    return sslkeypath;
+    return sslkeypath_;
 }
 
 int Conf::GetLogLevel() {
@@ -90,11 +93,29 @@ void Conf::SolveComment(std::string& buf) {
 Conf::Conf() {
 }
 
-void Conf::init(char* path) {
-    strncpy(conf, path, 99);
+// 类型萃取简化if else代码
+template<typename T>
+T GetValueOrDefault(const std::map<std::string, std::string>& m, const std::string& key, const T& default_value) {
+    auto it = m.find(key);
+    if (it != m.end()) {
+        if constexpr (std::is_integral_v<T>) {
+            return std::stoi(it->second);
+        } else if constexpr (std::is_same_v<T, bool>) {
+            return it->second == "1";
+        } else if constexpr (std::is_same_v<T, std::string>) {
+            return it->second;
+        } else {
+            return it->second;
+        }
+    }
+    return default_value;
+}
+
+void Conf::Init(char* path) {
+    strncpy(conf_, path, 99);
     std::map<std::string, std::string> m;
     std::fstream file;
-    file.open(conf, std::ios::in);
+    file.open(conf_, std::ios::in);
     std::string buf;
     while (!file.eof()) {
         getline(file, buf);
@@ -105,61 +126,17 @@ void Conf::init(char* path) {
     }
     file.close();
 
-    if (m.find("io_thread") != m.end())
-        io_thread = stoi(m["io_thread"]);
-    else
-        io_thread = DEFAULT_IO_THREAD;
-
-    if (m.find("port") != m.end())
-        port = m["port"];
-    else
-        port = DEFAULT_PORT;
-
-    if (m.find("listenq") != m.end())
-        listenq = stoi(m["listenq"]);
-    else
-        listenq = DEFAULT_LISTENQ;
-
-    if (m.find("storage") != m.end())
-        storage = m["storage"];
-    else
-        storage = DEFAULT_STORAGE;
-
-    if (m.find("keep_alived") != m.end())
-        keep_alived = stoi(m["keep_alived"]);
-    else
-        keep_alived = DEFAULT_KEEP_ALIVED;
-
-    if (m.find("logfile") != m.end())
-        logfile = m["logfile"];
-    else
-        logfile = DEFAULT_LOGFILE;
-
-    if (m.find("capacity") != m.end())
-        capacity = stoi(m["capacity"]);
-    else
-        capacity = DEFAULT_CAPACITY;
-
-    if (m.find("ssl") != m.end())
-        ssl = ("1" == m["ssl"]);
-    else
-        ssl = DEFAULT_SSL;
-
-    if (m.find("sslcrtpath") != m.end())
-        sslcrtpath = m["sslcrtpath"];
-    else
-        sslcrtpath = DEFAULT_SSLCRTPATH;
-
-    if (m.find("sslkeypath") != m.end())
-        sslkeypath = m["sslkeypath"];
-    else
-        sslkeypath = DEFAULT_SSLKEYPATH;
-
-    if (m.find("log_level") != m.end()) {
-        log_level_ = stoi(m["log_level"]);
-    } else {
-        log_level_ = DEFAULT_LOG_LEVEL;
-    }
+    io_thread_ = GetValueOrDefault(m, "io_thread", DEFAULT_IO_THREAD);
+    port_ = GetValueOrDefault(m, "port", std::string(DEFAULT_PORT));
+    listenq_ = GetValueOrDefault(m, "listenq", DEFAULT_LISTENQ);
+    storage_ = GetValueOrDefault(m, "storage", std::string(DEFAULT_STORAGE));
+    keep_alived_ = GetValueOrDefault(m, "keep-alived", DEFAULT_KEEP_ALIVED);
+    logfile_ = GetValueOrDefault(m, "logfile", std::string(DEFAULT_LOGFILE));
+    capacity_ = GetValueOrDefault(m, "capacity", DEFAULT_CAPACITY);
+    ssl_ = GetValueOrDefault(m, "ssl", DEFAULT_SSL);
+    sslcrtpath_ = GetValueOrDefault(m, "sslcrtpath", std::string(DEFAULT_SSLCRTPATH));
+    sslkeypath_ = GetValueOrDefault(m, "sslkeypath", std::string(DEFAULT_SSLKEYPATH));
+    log_level_ = GetValueOrDefault(m, "log_level", DEFAULT_LOG_LEVEL);
 }
 
 Conf& GetConf() {

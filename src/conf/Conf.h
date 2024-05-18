@@ -8,7 +8,7 @@
 class Conf {
 public:
     Conf();
-    void init(char* path);
+    void Init(char* path);
     int GetIoThreads();
     int GetListenq();
     int GetLogLevel();
@@ -27,24 +27,18 @@ private:
     void SolveComment(std::string& buf);
 
 private:
-    char conf[100];
-    int io_thread;
-    int listenq;
-    int keep_alived;
-    int capacity;
+    char conf_[100];
+    int io_thread_;
+    int listenq_;
+    int keep_alived_;
+    int capacity_;
     int log_level_;
-    bool ssl;
-    std::string port;
-    std::string storage;
-    std::string logfile;
-    std::string sslcrtpath;
-    std::string sslkeypath;
+    bool ssl_;
+    std::string port_;
+    std::string storage_;
+    std::string logfile_;
+    std::string sslcrtpath_;
+    std::string sslkeypath_;
 };
 
-// int GetIoThreads();
-// string GetPort();
-// int GetListenq();
-// int GetKeepAlived();
-// string GetStorage();
-// string GetLogFile();
 Conf& GetConf();
