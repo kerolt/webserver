@@ -58,10 +58,13 @@ Logger::Logger(const char* fileName, int line, int level)
     , impl_(fileName, line, level) {
 }
 
+// 一条日志的结束时间
 Logger::~Logger() {
     if (level_ < GetConf().GetLogLevel()) {
+        Stream().resetBuffer();
         return;
     }
+    LogFile::count++; // 只有在这里进行++操作才代表一条日志输入了文件中
     Stream() << "\t[" << impl_.GetBaseName() << ':' << impl_.GetLine() << "]\n";
     const LogStream::Buffer& buf(impl_.stream().buffer());
     Output(buf.data(), buf.length());
